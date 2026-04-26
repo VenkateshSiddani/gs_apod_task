@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA Astronomy Picture of the Day</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔭 NASA Astronomy Picture of the Day</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="date-picker">Select Date:</label>
+      <input type="date" id="date-picker" />
+      <button id="fetch-btn">Fetch APOD</button>
+    </section>
+
+    <div id="error-message" class="error hidden"></div>
+    <div id="loading" class="loading hidden">Loading...</div>
+
+    <article id="apod-container" class="hidden">
+      <h2 id="apod-title"></h2>
+      <p id="apod-date" class="date"></p>
+      <div id="media-container"></div>
+      <p id="apod-explanation" class="explanation"></p>
+      <p id="apod-copyright" class="copyright"></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Data provided by <a href="https://api.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Open APIs</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
